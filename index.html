@@ -3,135 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costco $100 Reward Pass Opportunity</title>
+    <title>Costco $100 Reward Opportunity</title>
     
     <!-- Inline Favicon (Prevents Netlify 404 Logs) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        /* GPU-Accelerated Animations */
-        @keyframes pulse-costco {
+        /* GPU-Accelerated Subtle Pulse */
+        @keyframes pulse-blue {
             0%, 100% { 
                 transform: scale(1); 
-                box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.5), 0 0 15px rgba(37, 99, 235, 0.3); 
+                box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39); 
             }
             50% { 
-                transform: scale(1.02); 
-                box-shadow: 0 20px 40px -5px rgba(220, 38, 38, 0.8), 0 0 25px rgba(37, 99, 235, 0.5); 
+                transform: scale(1.03); 
+                box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.55); 
             }
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-6px); }
-        }
-        .animate-pulse-btn {
-            animation: pulse-costco 2.2s infinite ease-in-out;
-            will-change: transform;
-        }
-        .animate-float {
-            animation: float 3.5s infinite ease-in-out;
+        .animate-btn {
+            animation: pulse-blue 2.2s infinite ease-in-out;
             will-change: transform;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-red-600 selection:text-white overflow-x-hidden">
+<body class="bg-neutral-100 text-neutral-800 min-h-screen flex flex-col justify-center items-center p-4 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="w-full bg-gradient-to-r from-blue-700 via-red-600 to-blue-700 py-1.5 px-4 text-center text-xs sm:text-sm font-black text-white tracking-wide uppercase shadow-md">
-        🎉 Limited Availability: $100 Costco Shopping Reward Spots Open!
-    </div>
-
-    <!-- Header Navigation (Standardized Container: max-w-4xl) -->
-    <header class="w-full border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 py-3.5 flex items-center justify-between">
-            <div class="flex items-center space-x-2.5">
-                <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white text-lg shadow-md shadow-blue-600/30">
-                    C
-                </div>
-                <span class="font-black text-xl tracking-tight text-white">Club<span class="text-red-500">Rewards</span></span>
-            </div>
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 inline-flex items-center">
-                <span class="w-2 h-2 bg-emerald-400 rounded-full mr-1.5 animate-pulse"></span> Active Offer
+    <!-- Main Light Card Container -->
+    <div class="w-full max-w-2xl bg-white border border-neutral-300 rounded-2xl shadow-lg p-6 sm:p-10 text-center relative overflow-hidden">
+        
+        <!-- Header Category Badge -->
+        <div class="mb-3">
+            <span class="text-xs sm:text-sm font-bold tracking-wider text-blue-600 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full uppercase">
+                Special Consumer Opportunity
             </span>
         </div>
-    </header>
 
-    <!-- Main Content (Standardized Container: max-w-4xl) -->
-    <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-10 sm:py-16 flex flex-col justify-center items-center text-center">
-
-        <!-- Visual Voucher Card for Costco -->
-        <div class="animate-float w-full max-w-sm bg-gradient-to-r from-blue-600 via-red-600 to-blue-700 p-1 rounded-2xl shadow-2xl mb-6">
-            <div class="bg-slate-900 rounded-[14px] p-5 flex items-center justify-between border border-blue-400/30 relative overflow-hidden">
-                <div class="text-left">
-                    <span class="text-[10px] font-extrabold tracking-widest text-blue-400 uppercase block">Wholesale Voucher</span>
-                    <span class="text-2xl font-black text-white tracking-tight">Costco</span>
-                    <span class="text-xs text-slate-400 block mt-0.5">Shopping Pass</span>
-                </div>
-                <div class="bg-red-600 text-white font-black text-3xl px-3.5 py-1.5 rounded-xl shadow-lg border border-red-400/30">
-                    $100
-                </div>
-            </div>
-        </div>
-
-        <!-- Headline & Subtitle -->
-        <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-3 max-w-2xl">
-            Claim Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-red-500">$100 Costco</span> Reward!
+        <!-- Headline -->
+        <h1 class="text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight leading-tight mb-3">
+            Get <span class="text-blue-600">$100</span> Towards Costco
         </h1>
-        <p class="text-slate-300 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
-            Participate in our shopper promotional distribution. Follow 3 simple steps on the official sponsor page to verify your entry!
+
+        <!-- Subtitle -->
+        <p class="text-neutral-600 text-sm sm:text-lg font-medium max-w-md mx-auto mb-6">
+            Sign Up & Complete The Program Tasks To Claim Your Reward Pass!
         </p>
 
-        <!-- Static 3-Step Overview Grid (Visual Guide Only) -->
-        <div class="w-full bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 mb-8 shadow-2xl backdrop-blur-md text-left">
-            <h2 class="text-base sm:text-lg font-bold text-white mb-6 flex items-center gap-2">
-                <span>📋</span> How To Secure Your Entry:
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <!-- Step 1 -->
-                <div class="flex flex-col items-start bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
-                    <div class="w-8 h-8 rounded-full bg-blue-600/20 text-blue-400 border border-blue-500/30 font-black text-sm flex items-center justify-center mb-2.5">1</div>
-                    <h3 class="font-bold text-white text-sm mb-1">Click Below</h3>
-                    <p class="text-xs text-slate-400 leading-normal">Tap the main button below to access the official sponsor portal.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="flex flex-col items-start bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
-                    <div class="w-8 h-8 rounded-full bg-blue-600/20 text-blue-400 border border-blue-500/30 font-black text-sm flex items-center justify-center mb-2.5">2</div>
-                    <h3 class="font-bold text-white text-sm mb-1">Enter Email</h3>
-                    <p class="text-xs text-slate-400 leading-normal">Submit your valid email to confirm location & claim eligibility.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="flex flex-col items-start bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
-                    <div class="w-8 h-8 rounded-full bg-red-600/20 text-red-400 border border-red-500/30 font-black text-sm flex items-center justify-center mb-2.5">3</div>
-                    <h3 class="font-bold text-white text-sm mb-1">Unlock Pass</h3>
-                    <p class="text-xs text-slate-400 leading-normal">Complete advertiser requirements to finalize your $100 voucher.</p>
+        <!-- Visual $100 Costco Pass Box -->
+        <div class="flex items-center justify-center my-6">
+            <div class="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-1 rounded-xl shadow-md w-full max-w-xs">
+                <div class="bg-neutral-900 rounded-lg p-4 flex items-center justify-between border border-blue-400/30">
+                    <div class="text-left">
+                        <span class="text-[10px] font-extrabold tracking-widest text-blue-400 uppercase block">Promotional Pass</span>
+                        <span class="text-xl font-black text-white tracking-tight">COSTCO</span>
+                    </div>
+                    <div class="bg-red-600 text-white font-black text-2xl px-3 py-1 rounded-md shadow">
+                        $100
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Single Call-To-Action Button -->
-        <div class="w-full max-w-xl flex flex-col items-center">
+        <!-- Simple Step-by-Step Task Instructions -->
+        <div class="bg-neutral-50 border border-neutral-200 rounded-xl p-4 sm:p-6 mb-8 text-left max-w-lg mx-auto">
+            <h2 class="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-3">
+                Simple Steps To Receive Your Reward:
+            </h2>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center mt-0.5">1</span>
+                    <p class="text-xs sm:text-sm text-neutral-700">
+                        <strong class="text-neutral-900">Click the button below</strong> to visit the official offer portal.
+                    </p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center mt-0.5">2</span>
+                    <p class="text-xs sm:text-sm text-neutral-700">
+                        <strong class="text-neutral-900">Enter your valid email</strong> and answer a few quick survey questions.
+                    </p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center mt-0.5">3</span>
+                    <p class="text-xs sm:text-sm text-neutral-700">
+                        <strong class="text-neutral-900">Complete required sponsor deals</strong> to unlock your $100 pass.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Primary Call-To-Action Button -->
+        <div class="max-w-xs mx-auto my-4">
             <a href="https://www.af9m8trk.com/QLJ11S9T/7FY11TL6/" 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="animate-pulse-btn inline-flex items-center justify-center w-full px-8 py-5 bg-gradient-to-r from-red-600 via-red-500 to-blue-600 hover:from-red-500 hover:to-blue-500 text-white font-black text-lg sm:text-2xl rounded-2xl shadow-2xl transition-all duration-300 transform active:scale-95 group tracking-wide">
-                <span>CLAIM YOUR $100 REWARD NOW →</span>
+               class="animate-btn block w-full py-4 px-8 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg sm:text-xl rounded-full transition-colors duration-200 shadow-md">
+                Click Here To Start
             </a>
-            <p class="text-xs text-slate-400 mt-3 font-medium">⚡ Fast & Free Setup • Instant Registration Page</p>
+            <p class="text-[11px] text-neutral-400 mt-2">Takes less than 2 minutes to begin</p>
         </div>
 
-    </main>
-
-    <!-- Footer / Compliance Disclaimer -->
-    <footer class="w-full border-t border-slate-800/80 py-6 bg-slate-950 text-center text-xs text-slate-400 px-4 mt-auto">
-        <div class="max-w-4xl mx-auto space-y-2">
-            <p>© 2026 ClubRewards Portal. All rights reserved.</p>
-            <p class="leading-relaxed text-slate-500">
-                <strong>Disclaimer:</strong> This website is an independent promotional portal and is not directly sponsored by, affiliated with, or endorsed by Costco Wholesale Corporation or any displayed retailer marks. Completing advertiser requirements on the destination page is required to finalize entry and verify eligibility.
-            </p>
+        <!-- Sub-tagline -->
+        <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-center text-xs text-neutral-500">
+            <span class="italic">*Shop, Answer & Get Rewarded</span>
         </div>
+
+    </div>
+
+    <!-- Legal Footer / Disclaimer -->
+    <footer class="max-w-2xl mt-6 text-center text-xs text-neutral-500 px-4 leading-relaxed">
+        <p>© 2026 Promotional Reward Directory. All rights reserved.</p>
+        <p class="mt-1 text-neutral-400">
+            <strong>Disclaimer:</strong> This website is an independent promotional portal and is not directly sponsored by, affiliated with, or endorsed by Costco Wholesale Corporation. Completing required advertiser tasks on the target page is required to qualify for rewards.
+        </p>
     </footer>
 
 </body>
